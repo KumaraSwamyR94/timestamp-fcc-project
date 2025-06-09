@@ -4,7 +4,7 @@
   "description": "An FCC Backend Challenge",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node --watch index.js"
   },
   "dependencies": {
     "express": "^4.12.4",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/freeCodeCamp/boilerplate-project-timestamp.git"
+    "url": "git+https://github.com/freeCodeCamp/boilerplate-project-timestamp.git"
   },
   "bugs": {
     "url": "https://github.com/freeCodeCamp/freeCodeCamp/issues"
@@ -24,5 +24,6 @@
     "express",
     "freeCodeCamp"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "type": "commonjs"
 }
