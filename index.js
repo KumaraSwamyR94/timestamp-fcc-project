@@ -38,7 +38,17 @@ app.get("/api/hello", function (req, res) {
   res.json({ greeting: "hello API" });
 });
 
-app.get("/api/:timestamp?", (req, resp) => {
+app.get("/api/whoami", (req, resp) => {
+  const payload = {
+    ipaddress: req.ip || req.connection.remoteAddress,
+    language: req.headers["accept-language"],
+    software: req.headers["user-agent"],
+  };
+
+  resp.json(payload);
+});
+
+app.get("/api", (req, resp) => {
   const { timestamp } = req.params;
   try {
     let date;
